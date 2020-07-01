@@ -1,0 +1,61 @@
+Calle Viera Andersson 3521501
+Compte Rendu TME6
+
+Exercice 1
+
+a) not and knows P knows not knows P Valide, car la négation est insatisfiable
+b) and knows P knows not knows P insatisfiable, aucune branche ouverte
+c) not and knows P not knows knows not P satisfiable mais non valide car la négation est satisfiable aussi
+
+Exercice 2
+
+En KT45, l’axiome T, axiome de la connaissance, nous dis que 
+knows not knows P implique not knows P
+l’axiome 5, axiome de l’introspection négative, nous dis 
+not knows P implique knows not knows P
+
+En KT4 l’absence de l’axiome 5 nous permet pas de montrer l’équivalence
+
+Sur Lotrec en S5 la négation de la formule suivante est insatisfiable, et donc la formule est valide
+not and not and not knows P knows not knows P not and not not knows P not knows not knows P
+
+En S4, la négation de la formule suivante est satisfiable et donc la formule est seulement satisfiable
+not and not and not nec P nec not nec P not and not not nec P not nec not nec P
+
+Exercice 3
+Première formule :
+On a ajouté 3 actions add w isItTrue or nec R1 P1 nec R1 not P1 pour chaque noeud (on remplace w par w1, w2, w3 dans chacune des actions).
+On trouve bien Yes à tous les noeuds, donc
+or nec R1 P1 nec R1 not P1 est valide dans ce modèle
+
+Deuxième formule :
+On a ajouté 3 actions add w isItTrue or nec R3 P3 nec R3 not P3 pour chaque noeud
+On trouve No à tous les noeuds, il n’existe donc pas de monde satisfaisant la formule
+
+Point 3 :
+Pour B, on a ajouté 3 actions add w isItTrue or nec R2 P2 nec R2 not P2
+Dans le monde où le papillon est sur la tête de C, la femme B sait si elle a un papillon sur la tête (puisqu’elle voit la femme C)
+Dans le monde où le papillon est sur la tête de B, la femme B ne sait pas si elle a un papillon sur la tête (normal, il peut être soit sur sa tête ou sur celle de A)
+Dans le monde où le papillon est sur la tête de A, la femme B ne sait pas non plus si elle-même (femme B) a un papillon sur la tête (même raison que le monde précédent)
+
+Point 4 :
+isItTrue nec R1 not or nec R3 P3 nec R3 not P3
+C’est vrai dans tous les mondes, donc c’est vrai tout court (vrai dans le modèle)
+
+Point 5 :
+isItTrue or nec R1 nec R2 P2 not or nec R2 P2 nec R2 not P2
+C’est faux dans le cas où le papillon est sur la tête de la femme C : la femme B sait effectivement si elle a un papillon sur la tête, mais la partie droite de l’implication est fausse, A ne peut effectivement pas savoir que B sait si B a un papillon sur la tête
+Dans les autres cas, B ne sait pas qu’elle a un papillon sur elle, et l’implication est vraie
+
+
+Exercice 4
+On ajoute à l'agent 1 les relations entre w1 et w2 ainsi qu'entre w3 et w4
+On ajoute à l'agent 2 les relations entre w1 et w2
+On ajoute à l'agent 3 les relations entre w1 et w3 ainsi qu'entre w2 et w4
+
+chacune des formules correspond aux formules suivantes sur Lotrec:
+(a) isItTrue and not nec R3 B not nec R3 not B
+(b) isItTrue and not nec R1 C or nec R1 B nec R1 not B
+(c) isItTrue or or nec R2 B nec R2 and A not B nec R2 and C not B
+
+On a vérifié sur Lotrec, les 3 formules sont bien valides pour le modèle de Kripke proposé, dans la logique S5.

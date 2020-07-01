@@ -1,0 +1,57 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf500
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\margb1417\margt1417\vieww12500\viewh15340\viewkind1\viewscale95
+\deftab720
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+
+\f0\fs24 \cf0 TME9\
+Andersson Calle Viera\
+3521501\
+\
+Exercice 2\
+3)\
+On remarque que p1 est un puit, en effet t0 consomme 2 ressources pour en g\'e9n\'e9rer une seule via t1 mais on ne peut pas remonter vers t0 car il n\'92y a qu\'92une seule ressource (une dans p1 mais plus aucune dans p2). Pour l\'92\'e9viter il faudrait utiliser t2 pour doubler la ressource avant.\
+Le .adr nous confirme l\'92analyse de liveliness, \'e0 savoir que p1 est un puit (donc graphe non vivant), et que le graphe n\'92est pas r\'e9versible \'e0 cause de ce puit (du moins, il ne revient pas sur le marquage initial).\
+\
+Exercice 3\
+2)\
+a. 2 sur P0 transitions vivantes : t0 t1 t2 t3 t4\
+b. 1 sur P0 transitions vivantes : null\
+c. 1 sur P3 transitions vivantes : t4 t3\
+d. 1 sur P1 transitions vivantes : t1 t3 t4\
+\
+3)\
+a. 4 sur P0  on met l\'92arc entre P0 et t0 a 4 toutes les transitions sont dans M et bloque au retour sur P0\
+b. 2 sur P1 on supprime l\'92arc entre t0 et P1, toutes les transitions sont dans M, P1 n\'92est plus atteignable et le r\'e9seau est bien born\'e9 sans blocage\
+c. Un r\'e9seau quasi-vivant mais pas vivant ne peut pas \'eatre r\'e9versible. Ce r\'e9seau est impossible\
+d. 1 sur P1 et 1 sur P2. On met l'arc entre t0 et p2 \'e0 1. Le reseau est donc bien born\'e9, vivant et reversible.\
+\
+Exercice 4:\
+\
+1)\
+Il y a un seul sc\'e9nario possible, celui de terminer sur la place "voiture finie", on peut le remarquer sur le graphe de marquage gr\'e2ce au sens des arcs. Pour atteindre cette place puit, il y a plusieurs sc\'e9nario possible suivant \'e0 quel moment on r\'e9alise la carrosserie.\
+\
+3)\
+Mod\'e9lisation\
+t2="un client entre"\
+t4="rasage"\
+t5="un client sort"\
+t3="le barbier se repose"\
+\
+Exercice 5:\
+\
+\
+Mod\'e9lisation:\
+pour l'insertion d'une pi\'e8ce de 50 centimes, on stock seulement la pi\'e8ce et on ajoute un caf\'e9 au compteur de caf\'e9\
+pour l'insertion d'une pi\'e8ce de 1 euros, on stock la pi\'e8ce et on rend 50 centimes en piochant dans le stock de 50 centimes, si celui-ci est vide, on utilise la recharge pour le recharger. Ici aussi on compte le nombre de caf\'e9.\
+Pour l'insertion d'un pi\'e8ce de 2 euros, gr\'e2ce \'e0 un arc inhibiteur on v\'e9rifie s'il y a une pi\'e8ce de 1 euros en stock, si oui, on rend 1 euros puis 50 centimes en faisant comme pr\'e9c\'e9demment.\
+Sinon, on rend 3 pi\'e8ces de 50 centimes provenant du stock.\
+On compte le nombre de pi\'e8ce de chaque type rendue ainsi que le nombre de caf\'e9 fabriqu\'e9.\
+On utilise des arcs inhibiteurs pour emp\'eacher la machine de commencer un autre caf\'e9 sans avoir rendu la monnaie du pr\'e9c\'e9dent.\
+Ici on teste avec 13 pi\'e8ces de 50 centimes qui vont \'eatre ins\'e9r\'e9es, 45 pi\'e8ces de 1euros et 40 pi\'e8ces de 2 euros pour en tout 98 caf\'e9s.\
+98*0.5=49\'80\
+On d\'e9pense 131,5\'80 et on constate bien un rendu total de 82,5\'80 \
+ \
+}
